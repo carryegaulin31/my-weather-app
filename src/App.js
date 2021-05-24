@@ -1,7 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import React, { useEffect, useState } from "react";
+export default function App() {
+  const [lat, setLat] = useState([]);
+  const [long, setLong] = useState([]);
+  
+  
+  
+  
   return (
     <div className="App">
       
@@ -9,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+

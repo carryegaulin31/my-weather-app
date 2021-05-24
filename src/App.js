@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
 export default function App() {
@@ -25,12 +24,13 @@ export default function App() {
  }, [lat, long]);
 
   
-  
+ 
   
   
   
   return (
     <div className="App">
+    <Weather weatherData={data}/>
     {(typeof data.main != 'undefined') ? (
       <Weather weatherData={data}/>
     ): (

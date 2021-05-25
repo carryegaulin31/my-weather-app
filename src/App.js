@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather';
+import styles from './styles.css'
 
 export default function App() {
   const [lat, setLat] = useState([]);
@@ -24,13 +25,13 @@ export default function App() {
   }, [lat,long])
   
   return (
-    <div className="App">
+    <section className={styles.App}>
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
         <div></div>
       )}
       
-    </div>
+    </section>
   );
 }
